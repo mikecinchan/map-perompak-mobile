@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residence Map</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        #map-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .image-mapper-shape {
+            fill: rgba(0, 0, 0, 0);
+        }
+        g:hover .image-mapper-shape {
+            stroke: white;
+            stroke-width: 2px;
+            opacity: 20%;
+        }
+        .house-info {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            pointer-events: none;
+            max-width: 80%;
+            font-size: 14px;
+            overflow-y: auto;
+            max-height: 50vh;
+        }
+        @media (max-width: 768px) {
+            .house-info {
+                position: fixed;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+                width: calc(100% - 20px);
+                max-width: none;
+                font-size: 12px;
+                max-height: 30vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="map-container">
+        <svg style="width:100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 4000 4000">
+            <image xlink:href="residence-map.jpg" width="4000" height="4000"></image>
+            <a data-house-id="1">
+                <g>
+                    <rect x="2001.8993352326686" y="3133.903133903134" width="68.37606837606813" height="117.75878442545127" class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="2">
+                <g>
+                    <rect x="2108.262108262108" y="2856.6001899335233" width="53.18138651472009" height="106.36277302943972" class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="3">
+                <g>
+                    <rect x="1956.315289648623" y="907.8822412155746" width="121.557454890788" height="45.5840455840455" class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="4">
+                <g>
+                    <rect x="569.8005698005697" y="2852.801519468186" width="91.16809116809122" height="45.584045584045725" class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="5">
+                <g>
+                    <rect x="3399.810066476733" y="1614.434947768281" width="64.57739791073118" height="91.16809116809122" class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="6">
+                <g>
+                    <rect x="2795.8214624881293" y="1580.2469135802469" width="64.57739791073118" height="87.36942070275404" class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="7">
+                <g>
+                    <rect x="2583.09591642925" y="2457.7397910731243" width="75.97340930674272" height="110.1614434947769" class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="8">
+                <g>
+                    <rect x="2188.034188034188" y="2875.593542260209" width="79.7720797720799" height="113.96011396011409"  class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="9">
+                <g>
+                    <rect x="3525.1661918328587" y="1614.434947768281" width="53.181386514719634" height="94.9667616334284"   class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="10">
+                <g>
+                    <rect x="1781.576448243115" y="3532.7635327635326" width="56.980056980056816" height="75.97340930674272"    class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="11">
+                <g>
+                    <rect x="1952.516619183286" y="3297.2459639126305" width="53.18138651471986" height="113.96011396011409"     class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="12">
+                <g>
+                    <rect x="1599.2402659069326" y="1416.9040835707503" width="94.9667616334284" height="53.181386514719634"      class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="13">
+                <g>
+                    <rect x="2127.255460588794" y="934.4729344729345" width="98.76543209876536" height="64.57739791073118"       class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="14">
+                <g>
+                    <rect x="2427.3504273504273" y="2453.941120607787" width="64.57739791073118" height="94.96676163342863"        class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="15">
+                <g>
+                    <rect x="2153.846153846154" y="3350.4273504273506" width="53.18138651472009" height="87.36942070275381"         class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="16">
+                <g>
+                    <rect x="1675.2136752136753" y="1565.0522317188984" width="91.168091168091" height="68.37606837606836"          class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="17">
+                <g>
+                    <rect x="1819.5631528964861" y="1375.1187084520418" width="94.9667616334284" height="60.778727445394"           class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="18">
+                <g>
+                    <rect x="2689.4586894586896" y="1580.2469135802469" width="49.38271604938245" height="83.57075023741686"            class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="19">
+                <g>
+                    <rect x="3046.5337132003797" y="1599.2402659069326" width="53.18138651472009" height="79.77207977207968"             class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="20">
+                <g>
+                    <rect x="1018.0436847103514" y="3095.9164292497626" width="94.96676163342829" height="56.980056980056816"              class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="21">
+                <g>
+                    <rect x="983.8556505223172" y="2529.91452991453" width="106.36277302943961" height="53.18138651472009"               class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="22">
+                <g>
+                    <rect x="3285.8499525166194" y="1614.434947768281" width="53.181386514719634" height="72.17473884140554"                class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="23">
+                <g>
+                    <rect x="2651.4719848053182" y="2761.633428300095" width="64.57739791073118" height="83.57075023741663"                 class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="24">
+                <g>
+                    <rect x="2890.7882241215575" y="2484.3304843304845" width="56.980056980056816" height="87.36942070275381"                  class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="25">
+                <g>
+                    <rect x="2415.954415954416" y="2742.6400759734092" width="68.37606837606836" height="94.96676163342818"                   class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="26">
+                <g>
+                    <rect x="2358.974358974359" y="2905.982905982906" width="53.18138651472009" height="91.16809116809145"                    class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="27">
+                <g>
+                    <rect x="2727.445394112061" y="2309.5916429249764" width="72.17473884140554" height="91.168091168091"                     class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="28">
+                <g>
+                    <rect x="1565.0522317188984" y="1739.7910731244065" width="79.77207977207968" height="64.57739791073118"                      class="image-mapper-shape"></rect>
+                </g>
+            </a>
+<a data-house-id="29">
+                <g>
+                    <rect x="2822.412155745489" y="2017.094017094017" width="75.97340930674272" height="94.96676163342818"                       class="image-mapper-shape"></rect>
+                </g>
+            </a>
+
+            <!-- Add more <a> elements for other houses as needed -->
+        </svg>
+    </div>
+
+    <script>
+        const houseInfo = {
+              1: { owner: "Michael Christian", address: "Topaz Timur 2 no 12", phone: "081299298822" },
+            2: { owner: "Phina Rumengan", address: "Topaz Timur 2 no 5", phone: "098-765-4321" },
+
+            3: { owner: "Denny", address: "Topaz Barat 80", phone: "08151691619" },
+            4: { owner: "Inez/Prapash", address: "Topaz Barat 6", phone: "08158877315" },
+            5: { owner: "Jeany/Donny (Bia)", address: "Topaz Timur 6 no 29", phone: "081311196153" },
+            6: { owner: "Setiawati (Iing)", address: "Topaz Timur 6 no 7", phone: "087885740861" },
+            7: { owner: "Verena", address: "Topaz Timur 3 no 9", phone: "085717287233" },
+		 8: { owner: "Erlin", address: "Topaz Timur 2 no 7", phone: "08118779073" },
+            9: { owner: "Wisnu", address: "Topaz Timur 6 no 33", phone: "0811988318" },
+           10: { owner: "Agatha Dewi (Phing2)", address: "Topaz Timur 1 no 20", phone: "081253866888" },
+           11: { owner: "Agnes/Hariyanto", address: "Topaz Timur 1 no 17", phone: "08128262063" },
+           12: { owner: "Anton Kwee", address: "Topaz Barat 62", phone: "089659333575" },
+           13: { owner: "Billy Ferdinand/Monica (kaki owl)", address: "Topaz Raya 55", phone: "081219395295" },
+           14: { owner: "Josy", address: "Topaz Timur 3 no 5", phone: "08159924388" },
+	      15: { owner: "Hengky", address: "Topaz Timur 1 no 23", phone: "08999179090" },
+           16: { owner: "Inge Sugita", address: "Topaz Raya 39", phone: "08990821992" },
+           17: { owner: "Jeanne Chrysanthea", address: "Topaz Raya 45", phone: "08111633237" },
+           18: { owner: "Klara Herniwati", address: "Topaz Timur 6 no 3", phone: "082227777605" },
+           19: { owner: "Klara Herniwati", address: "Topaz Timur 6 no 17", phone: "082227777605" },
+           20: { owner: "Mustafa/Laurasiwy", address: "Topaz Raya 8", phone: "081284457290" },
+           21: { owner: "Youngky", address: "Topaz Raya 15", phone: "081310867779" },
+           22: { owner: "Rudy (Hileud)", address: "Topaz Timur 6 no 25", phone: "08990000799" },
+           23: { owner: "Yovita", address: "Topaz Timur 3 no 20", phone: "08161389343" },
+           24: { owner: "Yovi", address: "Topaz Timur 3 no 19", phone: "085921706788" },
+           25: { owner: "Yanthi", address: "Topaz Timur 3 no 12", phone: "085811262578" },
+           26: { owner: "Veronika", address: "Topaz Timur 2 no 11", phone: "081214394572" },
+           27: { owner: "Susan", address: "Topaz Timur 5 no 28", phone: "087871447879" },
+           28: { owner: "Rudy", address: "Topaz Raya 33", phone: "085101599745" },
+           29: { owner: "Robert", address: "Topaz Timur 5 no 23", phone: "081213902754" },
+            // Add more house information as needed
+        };
+
+        const mapContainer = document.getElementById('map-container');
+        const areas = document.querySelectorAll('#map-container a');
+
+        areas.forEach(area => {
+            area.addEventListener('mouseover', showHouseInfo);
+            area.addEventListener('mouseout', hideHouseInfo);
+            // Add this line for debugging
+            area.addEventListener('click', (e) => console.log('Clicked:', e.currentTarget.getAttribute('data-house-id')));
+        });
+
+        function showHouseInfo(event) {
+            const houseId = event.currentTarget.getAttribute('data-house-id');
+            const info = houseInfo[houseId];
+            
+            console.log('Hovering over house:', houseId);
+
+            if (info) {
+                const infoElement = document.createElement('div');
+                infoElement.className = 'house-info';
+                infoElement.innerHTML = `
+                    <h3>House ${houseId}</h3>
+                    <p>Owner: ${info.owner}</p>
+                    <p>Address: ${info.address}</p>
+                    <p>Phone: ${info.phone}</p>
+                `;
+                
+                document.body.appendChild(infoElement);
+
+                if (window.innerWidth > 768) {
+                    // Desktop positioning
+                    const rect = mapContainer.getBoundingClientRect();
+                    const infoRect = infoElement.getBoundingClientRect();
+                    let left = event.clientX - rect.left + 10;
+                    let top = event.clientY - rect.top + 10;
+
+                    if (left + infoRect.width > rect.width) {
+                        left = rect.width - infoRect.width - 10;
+                    }
+                    if (top + infoRect.height > rect.height) {
+                        top = rect.height - infoRect.height - 10;
+                    }
+
+                    left = Math.max(10, left);
+                    top = Math.max(10, top);
+
+                    infoElement.style.left = `${left}px`;
+                    infoElement.style.top = `${top}px`;
+                }
+
+                infoElement.style.display = 'block';
+                console.log('Info element added:', infoElement);
+            }
+        }
+
+        function hideHouseInfo() {
+            const infoElement = document.querySelector('.house-info');
+            if (infoElement) {
+                infoElement.remove();
+                // Add this line for debugging
+                console.log('Info element removed');
+            }
+        }
+    </script>
+</body>
+</html>
